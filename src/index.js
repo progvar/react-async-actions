@@ -5,7 +5,6 @@ import { Provider } from 'react-redux';
 import { createLogger } from 'redux-logger';
 import LoginPage from './components/loginPage';
 import rootReducer from './reducers'
-require('babel-polyfill');
 
 
 const logger = createLogger();
