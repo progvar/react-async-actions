@@ -12,8 +12,8 @@ const store = createStore(rootReducer, applyMiddleware(logger));
 
 
 render(
-	<Provider store={store}>
-		<LoginPage />
-	</Provider>,
-	document.getElementById('app')
+    <Provider store={store}>
+        <LoginPage />
+    </Provider>,
+    document.getElementById('app')
 );
