@@ -5,11 +5,11 @@ const initState = {
 
 export default function rootReducer(state = initState, action) {
 	switch(action.type) {
-		'LOGIN_ATTEMPT':
+		case 'LOGIN_ATTEMPT':
 			return state;
-		'LOGIN_SUCCESS':
+		case 'LOGIN_SUCCESS':
 			return { loggedIn: action.payload };
-		'LOGIN_FAILED':
+		case 'LOGIN_FAILED':
 			return state;
 		// dummy logout reducer will be the same, kinda
 		default:

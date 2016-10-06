@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack --debug"
+  },
   "dependencies": {
     "react": "15.3.2",
     "react-dom": "15.3.2",
@@ -14,22 +18,17 @@
     "babel-cli": "6.16.0",
     "babel-core": "6.17.0",
     "babel-loader": "6.2.5",
-    "babel-polyfill": "6.16.0",
     "babel-preset-latest": "6.16.0",
     "babel-preset-react": "6.16.0",
     "webpack": "1.13.2",
     "webpack-dev-server": "1.16.1"
   },
-  "scripts": {
-    "start": "webpack-dev-server",
-    "build": "webpack --debug"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/progvar/react-async-actions.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["react", "webpack", "babel", "async", "await", "redux", "actions"],
+  "author": "Gyula Váradi",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/progvar/react-async-actions/issues"

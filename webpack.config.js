@@ -1,14 +1,16 @@
+const webpack = require('webpack');
+
 module.exports = {
-	entry: ['babel-polyfill', './src'],
+	entry: './src',
 	output: {
 		path: './build',
 		filename: 'bundle.js'
 	},
 	module: {
-		loader: {
+		loaders: [{
 			test: /\.js$/,
-			exclude: /node_modules/,
-			loader: 'babel'
-		}
+            exclude: /node_modules/,
+			loader: 'babel-loader'
+		}]
 	}
 }

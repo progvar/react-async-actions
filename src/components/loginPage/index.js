@@ -1,5 +1,12 @@
+import React from 'react';
 import { connect } from 'react-redux';
-import { login, logout } from './actions';
+import { login, logout } from '../../actions';
 
 
-export default function LoginPage() {};
+export default class LoginPage extends React.Component {
+	render() {
+    	return (
+    		<h1>Hi</h1>
+    	);
+	}
+};
