@@ -5,9 +5,20 @@ import { login, logout } from '../../actions';
 
 
 export default class LoginPage extends React.Component {
+    constructor() {
+        super();
+        this.clickHandler = this.clickHandler.bind(this);
+    }
+
+
+    clickHandler() {
+        login('Generic Béla', 'hahaha');
+    }
+
+
     render() {
         return (
-            <Button label="Log In" />
+            <Button label="Log In" onClick={this.clickHandler}/>
         );
     }
 };

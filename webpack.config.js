@@ -7,9 +7,9 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
     context: __dirname,
     devtool: 'inline-source-map',
-    entry: './src',
+    entry: ['babel-polyfill', 'whatwg-fetch', './src/client'],
     output: {
-        path: path.join(__dirname, 'build'),
+        path: path.join(__dirname, 'src/build'),
         filename: 'bundle.js',
         publicPath: '/'
     },

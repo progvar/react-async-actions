@@ -4,26 +4,34 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --content-base src/client",
+    "api": "node src/server",
     "build": "webpack --debug"
   },
   "dependencies": {
     "immutability-helper": "2.0.0",
+    "kcors": "2.2.0",
+    "koa": "2.0.0",
+    "koa-bodyparser": "3.2.0",
+    "koa-router": "7.0.1",
     "react": "15.3.2",
     "react-addons-css-transition-group": "15.3.2",
     "react-dom": "15.3.2",
     "react-redux": "4.4.5",
     "react-toolbox": "1.2.3",
     "redux": "3.6.0",
-    "redux-logger": "2.6.1"
+    "redux-logger": "2.6.1",
+    "whatwg-fetch": "1.0.0"
   },
   "devDependencies": {
     "autoprefixer": "6.5.1",
     "babel-cli": "6.16.0",
     "babel-core": "6.17.0",
     "babel-loader": "6.2.5",
+    "babel-polyfill": "6.16.0",
     "babel-preset-latest": "6.16.0",
     "babel-preset-react": "6.16.0",
+    "babel-register": "6.16.3",
     "css-loader": "0.25.0",
     "extract-text-webpack-plugin": "1.0.1",
     "node-sass": "3.10.1",
