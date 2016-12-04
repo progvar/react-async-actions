@@ -6,6 +6,7 @@ const initState = {
 export default function rootReducer(state = initState, action) {
     switch(action.type) {
         case 'LOGIN_ATTEMPT':
+            console.log(action)
             return state;
         case 'LOGIN_SUCCESS':
             return { loggedIn: action.payload };

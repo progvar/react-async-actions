@@ -6,7 +6,7 @@ function loginUser(username, password) {
         username,
         password
     });
-    
+
     const requestConfig = {
         method: 'POST',
         headers: {
@@ -16,7 +16,7 @@ function loginUser(username, password) {
         body: userData
     };
 
-    
+
     return fetch('http://localhost:3000/login', requestConfig)
             .then(parseResponse)
             .then(data => data);
@@ -25,10 +25,8 @@ function loginUser(username, password) {
 
 function parseResponse(res) {
     try {
-        console.log(res)
         return res.json();
     } catch (err) {
-        console.log(err)
         throw err;
     }
 }
@@ -39,21 +37,20 @@ function logoutUser(uid) {
 }
 
 
-export async function login(username, password, dispatch) {
-    try {
-        // dispatch({ type: 'LOGIN_ATTEMPT' })
-        const loginAction = await loginUser(username, password);
-        console.log(loginAction)
-        // dispatch({ type: 'LOGIN_SUCCESS', payload: true })
-    } catch(err) {
-        // dispatch({ type: 'LOGIN_FAILED' })
-        console.log(err);
-        throw err;
+export function login(username, password) {
+    return async dispatch => {
+        try {
+            const loginAction = await loginUser(username, password);
+            dispatch({ type: 'LOGIN_SUCCESS', payload: loginAction })
+        } catch(err) {
+            dispatch({ type: 'LOGIN_FAILED' })
+            throw err;
+        }
     }
 }
 
 
-export function logout(uid) {
+/*export function logout(uid) {
     return async dispatch => {
         try {
             dispatch({ type: 'LOGOUT_ATTEMPT' })
@@ -64,4 +61,4 @@ export function logout(uid) {
             console.log(err);
         }
     }
-}
+}*/
