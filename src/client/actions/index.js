@@ -32,11 +32,6 @@ function parseResponse(res) {
 }
 
 
-function logoutUser(uid) {
-    // some more magic
-}
-
-
 export function login(username, password) {
     return async dispatch => {
         try {
@@ -48,17 +43,3 @@ export function login(username, password) {
         }
     }
 }
-
-
-/*export function logout(uid) {
-    return async dispatch => {
-        try {
-            dispatch({ type: 'LOGOUT_ATTEMPT' })
-            await logoutUser(uid);
-            dispatch({ type: 'LOGOU_SUCCESS', payload: false })
-        } catch(err) {
-            dispatch({ type: 'LOGOUT_FAILED' })
-            console.log(err);
-        }
-    }
-}*/
