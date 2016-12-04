@@ -1,0 +1,17 @@
+.appBar {
+    background-color: white;
+    color: black;
+
+    button {
+        padding: 0;
+
+
+        .icon {
+            position: initial;
+            width: inherit;
+            height: inherit;
+            line-height: 3.6rem !important;
+        }
+    }
+}
+

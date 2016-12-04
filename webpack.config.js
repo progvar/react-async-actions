@@ -24,7 +24,7 @@ module.exports = {
             loader: 'babel-loader'
         }, {
             test: /(\.scss|\.css)$/,
-            loader: ExtractTextPlugin.extract('style', 'css?sourceMap&modules&importLoaders=1&localIdentName=[name]-[local]-[hash:base64:5]!postcss!sass')
+            loader: ExtractTextPlugin.extract('style', 'css?sourceMap&modules&importLoaders=1&localIdentName=[local]!postcss!sass')
         }]
     },
     postcss: [autoprefixer],
