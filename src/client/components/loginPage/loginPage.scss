@@ -1,0 +1,11 @@
+.login-page {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 60px);
+    display: flex;
+    align-items: middle;
+    background-image: url('./../../images/login-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}

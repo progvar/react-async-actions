@@ -5,8 +5,8 @@ import theme from './header.scss';
 
 
 export default class Header extends React.Component {
-    
 
+    
     render() {
         return (
             <AppBar title='Welcome' theme={theme}>
