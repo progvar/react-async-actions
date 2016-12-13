@@ -12,7 +12,7 @@ React app archetype for asynchronous Redux actions using async/await.
 ##Script cheatsheet
 
 ```
-npm i
+npm install
 npm run api
 npm start
 ```
