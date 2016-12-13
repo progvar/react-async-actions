@@ -4,7 +4,7 @@ import { Button } from 'react-toolbox/lib/button';
 import { connect } from 'react-redux';
 import { login } from '../../actions';
 
-import './InputContainer.scss';
+import './inputContainer.scss';
 
 
 import theme from './theme.scss'
